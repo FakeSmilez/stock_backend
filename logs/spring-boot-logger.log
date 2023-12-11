@@ -1,0 +1,400 @@
+2023-12-11 07:05:14,689 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@4c4748bf - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@7ce97ee5 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:171)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:149)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:137)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:366)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)
+	at com.codemobiles.stock_backend.StockBackendApplication.main(StockBackendApplication.java:13)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@4c4748bf - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+ERROR in ch.qos.logback.classic.pattern.ClassOfCallerConverter@7ce97ee5 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:277)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:255)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:81)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:61)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:189)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:332)
+	... 19 common frames omitted
+	Suppressed: java.lang.NumberFormatException: For input string: "1."
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Integer.parseInt(Integer.java:668)
+		at java.base/java.lang.Integer.parseInt(Integer.java:786)
+		at ch.qos.logback.classic.pattern.NamedConverter.start(NamedConverter.java:92)
+		at ch.qos.logback.core.pattern.ConverterUtil.startConverters(ConverterUtil.java:37)
+		at ch.qos.logback.core.pattern.ConverterUtil.startConverters(ConverterUtil.java:33)
+		at ch.qos.logback.core.pattern.PatternLayoutBase.start(PatternLayoutBase.java:90)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandleComplex(ImplicitModelHandler.java:208)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandle(ImplicitModelHandler.java:186)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:257)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:208)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:170)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:65)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:287)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.lambda$loadConfiguration$1(LogbackLoggingSystem.java:249)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.withLoggingSuppressed(LogbackLoggingSystem.java:467)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:244)
+		... 23 common frames omitted
+	Suppressed: java.lang.NumberFormatException: For input string: "1."
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Integer.parseInt(Integer.java:668)
+		at java.base/java.lang.Integer.parseInt(Integer.java:786)
+		at ch.qos.logback.classic.pattern.NamedConverter.start(NamedConverter.java:92)
+		at ch.qos.logback.core.pattern.ConverterUtil.startConverters(ConverterUtil.java:37)
+		at ch.qos.logback.core.pattern.PatternLayoutBase.start(PatternLayoutBase.java:90)
+		at ch.qos.logback.classic.encoder.PatternLayoutEncoder.start(PatternLayoutEncoder.java:28)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandleComplex(ImplicitModelHandler.java:208)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandle(ImplicitModelHandler.java:186)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:257)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:208)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:170)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:65)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:287)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.lambda$loadConfiguration$1(LogbackLoggingSystem.java:249)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.withLoggingSuppressed(LogbackLoggingSystem.java:467)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:244)
+		... 23 common frames omitted
+2566-12-11 07:06:33,678 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 07:06:33,688 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 148208 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 07:06:33,689 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 07:06:34,496 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 07:06:34,508 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:06:34,508 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 07:06:34,510 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 07:06:34,617 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 07:06:34,618 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 884 ms
+2566-12-11 07:06:34,941 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:06:34,957 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 07:06:34,968 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.628 seconds (JVM running for 2.008)
+2566-12-11 07:07:19,379 INFO org.apache.juli.logging.DirectJDKLog [http-nio-1150-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2566-12-11 07:07:19,380 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-1] Initializing Servlet 'dispatcherServlet'
+2566-12-11 07:07:19,381 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-1] Completed initialization in 0 ms
+2566-12-11 07:08:15,508 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-6] iBlurBlur error
+2566-12-11 07:08:15,509 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-6] iBlurBlur warn
+2566-12-11 07:13:16,094 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-9] iBlurBlur error
+2566-12-11 07:13:16,094 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-9] iBlurBlur warn
+2566-12-11 07:13:23,271 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-1] iBlurBlur error
+2566-12-11 07:13:23,271 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-1] iBlurBlur warn
+2566-12-11 07:28:45,544 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-8] iBlurBlur error
+2566-12-11 07:28:45,544 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-8] iBlurBlur warn
+2566-12-11 07:35:30,561 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-6] iBlurBlur error
+2566-12-11 07:35:30,562 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-6] iBlurBlur warn
+2566-12-11 07:37:01,926 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 07:37:01,934 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 130800 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 07:37:01,935 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 07:37:02,767 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 07:37:02,775 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:37:02,776 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 07:37:02,776 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 07:37:02,846 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 07:37:02,847 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 875 ms
+2566-12-11 07:37:03,210 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:37:03,232 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 07:37:03,242 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.647 seconds (JVM running for 1.906)
+2566-12-11 07:37:12,450 INFO org.apache.juli.logging.DirectJDKLog [http-nio-1150-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2566-12-11 07:37:12,450 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-2] Initializing Servlet 'dispatcherServlet'
+2566-12-11 07:37:12,451 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-2] Completed initialization in 0 ms
+2566-12-11 07:38:05,922 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 07:38:05,929 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 133852 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 07:38:05,930 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 07:38:06,753 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 07:38:06,762 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:38:06,763 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 07:38:06,763 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 07:38:06,832 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 07:38:06,832 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 861 ms
+2566-12-11 07:38:06,873 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productController' defined in file [C:\Users\smile\Desktop\demo2\target\classes\com\codemobiles\stock_backend\controller\api\ProductController.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.codemobiles.stock_backend.controller.api.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The constructor Product(long, String, String, int, int) is undefined
+	The method getName() is undefined for the type Product
+
+2566-12-11 07:38:06,877 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2566-12-11 07:38:06,887 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2566-12-11 07:38:06,904 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productController' defined in file [C:\Users\smile\Desktop\demo2\target\classes\com\codemobiles\stock_backend\controller\api\ProductController.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.codemobiles.stock_backend.controller.api.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The constructor Product(long, String, String, int, int) is undefined
+	The method getName() is undefined for the type Product
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:296)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.codemobiles.stock_backend.StockBackendApplication.main(StockBackendApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.codemobiles.stock_backend.controller.api.ProductController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The constructor Product(long, String, String, int, int) is undefined
+	The method getName() is undefined for the type Product
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:311)
+	... 19 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The constructor Product(long, String, String, int, int) is undefined
+	The method getName() is undefined for the type Product
+
+	at com.codemobiles.stock_backend.controller.api.ProductController.<init>(ProductController.java:67)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 21 common frames omitted
+2566-12-11 07:38:40,680 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 07:38:40,688 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 152792 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 07:38:40,689 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 07:38:41,457 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 07:38:41,466 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:38:41,467 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 07:38:41,467 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 07:38:41,548 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 07:38:41,549 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 826 ms
+2566-12-11 07:38:41,843 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:38:41,862 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 07:38:41,871 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.526 seconds (JVM running for 1.918)
+2566-12-11 07:38:45,869 INFO org.apache.juli.logging.DirectJDKLog [http-nio-1150-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2566-12-11 07:38:45,869 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-1] Initializing Servlet 'dispatcherServlet'
+2566-12-11 07:38:45,871 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-1] Completed initialization in 2 ms
+2566-12-11 07:38:58,151 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 07:38:58,159 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 133768 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 07:38:58,161 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 07:38:58,958 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 07:38:58,969 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:38:58,970 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 07:38:58,970 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 07:38:59,052 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 07:38:59,052 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 854 ms
+2566-12-11 07:38:59,353 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:38:59,380 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 07:38:59,390 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.582 seconds (JVM running for 1.829)
+2566-12-11 07:39:03,019 INFO org.apache.juli.logging.DirectJDKLog [http-nio-1150-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2566-12-11 07:39:03,019 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-1] Initializing Servlet 'dispatcherServlet'
+2566-12-11 07:39:03,020 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-1] Completed initialization in 0 ms
+2566-12-11 07:39:42,581 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 07:39:42,591 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 153136 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 07:39:42,593 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 07:39:43,430 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 07:39:43,438 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:39:43,438 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 07:39:43,438 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 07:39:43,508 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 07:39:43,513 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 880 ms
+2566-12-11 07:39:43,896 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:39:43,924 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 07:39:43,935 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.693 seconds (JVM running for 1.946)
+2566-12-11 07:39:50,663 INFO org.apache.juli.logging.DirectJDKLog [http-nio-1150-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2566-12-11 07:39:50,665 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-1] Initializing Servlet 'dispatcherServlet'
+2566-12-11 07:39:50,666 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-1] Completed initialization in 1 ms
+2566-12-11 07:43:54,597 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 07:43:54,606 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 148160 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 07:43:54,608 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 07:43:55,401 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 07:43:55,409 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:43:55,410 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 07:43:55,410 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 07:43:55,478 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 07:43:55,478 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 832 ms
+2566-12-11 07:43:55,793 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 07:43:55,816 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 07:43:55,824 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.558 seconds (JVM running for 1.817)
+2566-12-11 07:44:00,547 INFO org.apache.juli.logging.DirectJDKLog [http-nio-1150-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2566-12-11 07:44:00,547 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-2] Initializing Servlet 'dispatcherServlet'
+2566-12-11 07:44:00,549 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-2] Completed initialization in 0 ms
+2566-12-11 07:44:56,219 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-10] iBlurBlur error
+2566-12-11 07:44:56,220 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-10] iBlurBlur warn
+2566-12-11 07:46:36,010 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-10] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2566-12-11 07:47:16,958 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-3] iBlurBlur error
+2566-12-11 07:47:16,958 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-3] iBlurBlur warn
+2566-12-11 07:52:29,173 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-1] iBlurBlur error
+2566-12-11 07:52:29,174 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-1] iBlurBlur warn
+2566-12-11 07:58:22,519 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-5] iBlurBlur error
+2566-12-11 07:58:22,520 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-5] iBlurBlur warn
+2566-12-11 08:01:09,389 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-2] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------160348326618597070387059;charset=UTF-8' not supported]
+2566-12-11 08:01:31,523 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-3] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------294875892886451130672825;charset=UTF-8' not supported]
+2566-12-11 08:01:59,532 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-5] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------428826346999521045449098;charset=UTF-8' not supported]
+2566-12-11 08:02:03,960 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-6] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------427562651810997554564089;charset=UTF-8' not supported]
+2566-12-11 08:02:07,470 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-9] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------247302154386035566093425;charset=UTF-8' not supported]
+2566-12-11 08:02:16,654 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-10] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------126835414868701066572849;charset=UTF-8' not supported]
+2566-12-11 08:02:20,134 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-7] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+2566-12-11 08:02:24,156 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-8] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+2566-12-11 08:02:28,177 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-1] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------947146202771281362555392;charset=UTF-8' not supported]
+2566-12-11 08:02:37,592 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-2] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------598036476387791385479580;charset=UTF-8' not supported]
+2566-12-11 08:02:47,478 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-3] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------002372550345536923707654;charset=UTF-8' not supported]
+2566-12-11 08:03:05,578 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 08:03:05,584 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 143388 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 08:03:05,585 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 08:03:06,497 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 08:03:06,505 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:03:06,506 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 08:03:06,506 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 08:03:06,589 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 08:03:06,589 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 964 ms
+2566-12-11 08:03:06,914 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:03:06,947 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 08:03:06,957 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.728 seconds (JVM running for 1.972)
+2566-12-11 08:03:14,742 INFO org.apache.juli.logging.DirectJDKLog [http-nio-1150-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2566-12-11 08:03:14,742 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-2] Initializing Servlet 'dispatcherServlet'
+2566-12-11 08:03:14,744 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-2] Completed initialization in 0 ms
+2566-12-11 08:03:14,761 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-2] iBlurBlur error
+2566-12-11 08:03:14,761 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-2] iBlurBlur warn
+2566-12-11 08:03:25,576 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-4] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------457152091033047073463394;charset=UTF-8' not supported]
+2566-12-11 08:03:45,248 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 08:03:45,257 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 144236 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 08:03:45,258 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 08:03:46,054 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 08:03:46,062 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:03:46,063 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 08:03:46,066 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 08:03:46,132 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 08:03:46,132 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 831 ms
+2566-12-11 08:03:46,453 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:03:46,477 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 08:03:46,487 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.59 seconds (JVM running for 1.84)
+2566-12-11 08:04:05,402 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 08:04:05,412 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 157124 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 08:04:05,413 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 08:04:06,246 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 08:04:06,254 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:04:06,255 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 08:04:06,256 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 08:04:06,331 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 08:04:06,332 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 873 ms
+2566-12-11 08:04:06,652 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:04:06,673 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 08:04:06,682 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.629 seconds (JVM running for 1.889)
+2566-12-11 08:04:38,059 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 08:04:38,069 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 140932 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 08:04:38,070 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 08:04:38,848 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 08:04:38,856 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:04:38,857 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 08:04:38,857 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 08:04:38,927 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 08:04:38,927 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 821 ms
+2566-12-11 08:04:39,248 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:04:39,280 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 08:04:39,292 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.587 seconds (JVM running for 1.825)
+2566-12-11 08:04:48,457 INFO org.apache.juli.logging.DirectJDKLog [http-nio-1150-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2566-12-11 08:04:48,458 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-2] Initializing Servlet 'dispatcherServlet'
+2566-12-11 08:04:48,460 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-2] Completed initialization in 0 ms
+2566-12-11 08:04:48,476 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-2] iBlurBlur error
+2566-12-11 08:04:48,477 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-2] iBlurBlur warn
+2566-12-11 08:05:38,904 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-5] iBlurBlur error
+2566-12-11 08:05:38,905 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-5] iBlurBlur warn
+2566-12-11 08:05:52,552 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-10] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------987817190820220627867164;charset=UTF-8' not supported]
+2566-12-11 08:05:59,892 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-1] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------372584726859109328115248;charset=UTF-8' not supported]
+2566-12-11 08:06:11,298 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 08:06:11,308 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 154848 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 08:06:11,311 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 08:06:12,121 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 08:06:12,130 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:06:12,131 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 08:06:12,132 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 08:06:12,197 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 08:06:12,198 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 848 ms
+2566-12-11 08:06:12,516 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:06:12,540 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 08:06:12,548 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.594 seconds (JVM running for 1.841)
+2566-12-11 08:06:23,558 INFO org.apache.juli.logging.DirectJDKLog [http-nio-1150-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2566-12-11 08:06:23,558 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-1] Initializing Servlet 'dispatcherServlet'
+2566-12-11 08:06:23,560 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-1] Completed initialization in 0 ms
+2566-12-11 08:06:23,588 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-1] iBlurBlur error
+2566-12-11 08:06:23,588 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-1] iBlurBlur warn
+2566-12-11 08:06:32,569 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-4] iBlurBlur error
+2566-12-11 08:06:32,570 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-4] iBlurBlur warn
+2566-12-11 08:06:37,032 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-5] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------039499294779617169288170;charset=UTF-8' not supported]
+2566-12-11 08:06:48,658 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-7] iBlurBlur error
+2566-12-11 08:06:48,658 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-7] iBlurBlur warn
+2566-12-11 08:07:04,345 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-10] iBlurBlur error
+2566-12-11 08:07:04,346 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-10] iBlurBlur warn
+2566-12-11 08:07:18,511 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-1] iBlurBlur error
+2566-12-11 08:07:18,511 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-1] iBlurBlur warn
+2566-12-11 08:07:41,711 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 08:07:41,719 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 157224 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 08:07:41,720 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 08:07:42,548 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 08:07:42,559 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:07:42,560 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 08:07:42,560 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 08:07:42,630 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 08:07:42,631 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 874 ms
+2566-12-11 08:07:42,944 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:07:42,964 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 08:07:42,973 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.596 seconds (JVM running for 1.848)
+2566-12-11 08:07:51,095 INFO org.apache.juli.logging.DirectJDKLog [http-nio-1150-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2566-12-11 08:07:51,096 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-2] Initializing Servlet 'dispatcherServlet'
+2566-12-11 08:07:51,097 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-2] Completed initialization in 1 ms
+2566-12-11 08:07:51,150 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-2] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------483964958067069110703629;charset=UTF-8' not supported]
+2566-12-11 08:07:58,962 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-3] iBlurBlur error
+2566-12-11 08:07:58,963 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-3] iBlurBlur warn
+2566-12-11 08:08:09,967 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-4] iBlurBlur error
+2566-12-11 08:08:09,969 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-4] iBlurBlur warn
+2566-12-11 08:08:21,257 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-7] iBlurBlur error
+2566-12-11 08:08:21,258 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-7] iBlurBlur warn
+2566-12-11 08:08:31,181 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-9] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------925084532930541691494112;charset=UTF-8' not supported]
+2566-12-11 08:08:35,205 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-8] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------270813789786620648273082;charset=UTF-8' not supported]
+2566-12-11 08:08:38,455 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-10] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public void com.codemobiles.stock_backend.controller.api.ProductController.editProduct(com.codemobiles.stock_backend.model.Product,long)]
+2566-12-11 08:08:41,610 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-1150-exec-2] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------580096705078800656518145;charset=UTF-8' not supported]
+2566-12-11 08:09:29,685 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-5] iBlurBlur error
+2566-12-11 08:09:29,685 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-5] iBlurBlur warn
+2566-12-11 08:10:16,793 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.3.Final
+2566-12-11 08:10:16,800 INFO org.springframework.boot.StartupInfoLogger [main] Starting StockBackendApplication using Java 17.0.9 on Fake_Smile with PID 52208 (C:\Users\smile\Desktop\demo2\target\classes started by smile in C:\Users\smile\Desktop\demo2)
+2566-12-11 08:10:16,801 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2566-12-11 08:10:17,620 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 1150 (http)
+2566-12-11 08:10:17,628 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:10:17,629 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2566-12-11 08:10:17,630 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.63]
+2566-12-11 08:10:17,696 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2566-12-11 08:10:17,697 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 859 ms
+2566-12-11 08:10:18,001 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-1150"]
+2566-12-11 08:10:18,023 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 1150 (http) with context path ''
+2566-12-11 08:10:18,032 INFO org.springframework.boot.StartupInfoLogger [main] Started StockBackendApplication in 1.593 seconds (JVM running for 1.845)
+2566-12-11 08:10:22,597 INFO org.apache.juli.logging.DirectJDKLog [http-nio-1150-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2566-12-11 08:10:22,597 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-2] Initializing Servlet 'dispatcherServlet'
+2566-12-11 08:10:22,599 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-1150-exec-2] Completed initialization in 2 ms
+2566-12-11 08:10:26,032 ERROR com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-3] iBlurBlur error
+2566-12-11 08:10:26,033 WARN com.codemobiles.stock_backend.controller.api.ProductController [http-nio-1150-exec-3] iBlurBlur warn
